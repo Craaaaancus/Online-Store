@@ -1,0 +1,13 @@
+$blueSky: #5793d9;
+
+store-header-line {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $blueSky;
+  height: 90px;
+}
+
+.search-line {
+  display: flex;
+}
