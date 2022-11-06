@@ -1,5 +1,5 @@
 import { Controller } from "../controller/Controller";
-import { StoreHeaderLine } from "../customElements";
+import { FilterContainer, StoreHeaderLine } from "../customElements";
 import { IDataProduct, IDataProductList } from "../interfaces";
 import { AppView } from "../view/AppView";
 
@@ -13,11 +13,14 @@ export class App {
     // )
     
     customElements.define('store-header-line', StoreHeaderLine)
+    customElements.define('filter-container', FilterContainer)
 
-    const elem: HTMLElement = document.createElement('store-header-line')
+    const storeHeaderLine: HTMLElement = document.createElement('store-header-line')
+    const filterContainer: HTMLElement = document.createElement('filter-container')
     const app: HTMLElement | null = document.getElementById('app')
     if (app) {
-      app.append(elem)
+      app.append(storeHeaderLine)
+      app.append(filterContainer)
     }
   }
 }
