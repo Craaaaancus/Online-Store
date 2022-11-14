@@ -12,7 +12,7 @@ export class FilterContainer extends HTMLElement {
   }
   connectedCallback(){
     this.innerHTML = `
-      <h2>Filters</h2>
+      <h2 class="filter-header">Filters</h2>
       <filter-category-container></filter-category-container>
       <button is="apply-button">Apply Filters</button>
       <button is="reset-button">Reset Filters</button>

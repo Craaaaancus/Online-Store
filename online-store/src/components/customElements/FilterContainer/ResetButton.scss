@@ -3,4 +3,9 @@ $redDark: #c71a1a;
 button[is="reset-button"] {
   background: $redDark;
   color: #fff;
+  transition: background .5s linear;
+}
+
+button[is="reset-button"]:hover {
+  background: #c70404;
 }

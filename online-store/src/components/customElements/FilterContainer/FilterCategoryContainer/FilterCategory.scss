@@ -1,0 +1,127 @@
+filter-category {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.category-content {
+  margin-top: 5px;
+  display: grid;
+  gap: 5px 3px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.category-header {
+  margin-bottom: 5px;
+}
+
+.colors {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.red {
+  background: red;
+}
+
+.grey {
+  background: grey;
+}
+
+.white {
+  background: white;
+}
+
+.black {
+  background: black;
+}
+
+.purple {
+  background: purple;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.blue {
+  background: blue;
+}
+
+.pink {
+  background: pink;
+}
+
+.orange {
+  background: orange;
+}
+
+.green {
+  background: green;
+}
+
+.brands {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.brand {
+  width: 75px;
+  height: 35px;
+  margin: 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.marvel {
+  background-image: url(./images/Brand/Marvel_Logo.svg.png);
+}
+
+.tmnt {
+  background-image: url(./images/Brand/tmnt.png);
+}
+
+.transformers {
+  background-image: url('./images/Brand/transformers_logo.gif');
+}
+
+.pokemon {
+  background-image: url('./images/Brand/Pokemon.svg');
+}
+
+.companies {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 80%;
+}
+
+.company {
+  max-width: 80px;
+  height: 50px;
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bandai {
+  background-image: url('./images/Company/bandai.png');
+}
+
+.funko {
+  background-image: url('./images/Company/funko.png');
+}
+
+.hasbro {
+  background-image: url('./images/Company/hasbro.png');
+}
+
+.medicom {
+  background-image: url('./images/Company/medicom.png');
+}

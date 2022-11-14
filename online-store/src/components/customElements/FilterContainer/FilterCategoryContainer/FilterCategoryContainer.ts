@@ -1,10 +1,12 @@
 import './FilterCategoryContainer.scss'
+import { FilterCategory } from './FilterCategory'
 import { RangeSlider } from './RangeSlider'
 
 export class FilterCategoryContainer extends HTMLElement {
   constructor(){
     super()
     customElements.define('range-slider', RangeSlider)
+    customElements.define('filter-category', FilterCategory)
   }
 
   connectedCallback(){
@@ -12,13 +14,33 @@ export class FilterCategoryContainer extends HTMLElement {
     const maxSliderValue = 100
     const firstValue = 1
     const secondValue = 33
+
     this.innerHTML = `
-      <range-slider 
-        min=${minSliderValue}
-        max=${maxSliderValue}
-        firstValue=${firstValue}
-        secondValue=${secondValue}
-      ></range-slider>
+      <filter-category type="color"></filter-category>
+      <filter-category type="brand"></filter-category>
+      <filter-category type="company"></filter-category>
+      <div class="slider-block">
+        <h3>Amount</h3>
+        <range-slider
+          min=${minSliderValue}
+          max=${maxSliderValue}
+          firstValue=${firstValue}
+          secondValue=${secondValue}
+        ></range-slider>
+      </div>
+      <div class="slider-block">
+        <h3>Year of release</h3>
+        <range-slider
+          min=${minSliderValue}
+          max=${maxSliderValue}
+          firstValue=${firstValue}
+          secondValue=${secondValue}
+        ></range-slider>
+      </div>
+      <div class="only-popular-category">
+        <h4>Only popular: </h4>
+        <div class="checkbox"></div>
+      </div>
     `
   }
 }
