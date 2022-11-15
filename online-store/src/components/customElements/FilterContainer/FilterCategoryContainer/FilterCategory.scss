@@ -15,6 +15,15 @@ filter-category {
   margin-bottom: 5px;
 }
 
+.color, .brand, .company {
+  cursor: pointer;
+  transition: transform .3s linear;
+}
+
+.color:hover, .brand:hover, .company:hover {
+  transform: scale(1.1);
+}
+
 .colors {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr;

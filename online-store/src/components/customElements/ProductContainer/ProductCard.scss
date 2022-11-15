@@ -1,0 +1,60 @@
+product-card {
+  cursor: pointer;
+  flex-wrap: wrap;
+  background-color: rgba(26, 27, 28, 0.749);
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(98, 111, 113);
+  border-image: initial;
+  border-radius: 10px;
+  padding: 0px;
+  transition: border 0.5s ease 0s;
+}
+
+product-card:hover {
+  border-color: rgb(230, 54, 27);
+}
+
+.card-name {
+  text-align: center;
+  color: rgb(230, 54, 27);
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 80px;
+  cursor: pointer;
+  margin: 20px 10px;
+}
+
+.card-img-wrapper {
+  display: flex;
+  cursor: pointer;
+}
+
+.card-img {
+  pointer-events: none;
+  user-select: none;
+  height: 200px;
+  width: auto;
+  margin: 0px auto;
+}
+
+.card-props {
+  margin-top: 15px;
+  line-height: 30px;
+  padding-left: 10px;
+  pointer-events: none;
+  text-align: center;
+  user-select: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+
+.card-price {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(12, 139, 189);
+  padding: 15px 0px;
+}

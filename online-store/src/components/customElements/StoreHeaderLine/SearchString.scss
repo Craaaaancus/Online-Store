@@ -1,5 +1,7 @@
+$orangeLight: #f2ad44;
+
 input[is="search-string"] {
   width: 600px;
   outline-width: 1px;
-  outline-color: #f2ad44;
+  outline-color: $orangeLight;
 }

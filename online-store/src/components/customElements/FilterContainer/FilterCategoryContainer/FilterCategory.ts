@@ -5,7 +5,7 @@ import './images/Brand/tmnt.png'
 import './images/Brand/transformers_logo.gif'
 import './images/Company/bandai.png'
 import './images/Company/funko.png'
-import './images/Company/hasbro.svg'
+import './images/Company/hasbro.png'
 import './images/Company/medicom.png'
 
 export class FilterCategory extends HTMLElement {

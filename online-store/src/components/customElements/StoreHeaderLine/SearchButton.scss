@@ -6,4 +6,9 @@ button[is="search-button"] {
   font-size: 18px;
   color: #fff;
   background: $orangeLight;
+  transition: background .5s linear;
+}
+
+button[is="search-button"]:hover {
+  background: rgb(235, 182, 69);
 }

@@ -1,0 +1,28 @@
+product-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-settings {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 20px;
+}
+
+.sort-settings {
+  display: flex;
+  margin-right: 50px;
+}
+
+.sort-heading {
+  color: #fff;
+  margin: 5px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 50px 15px;
+}

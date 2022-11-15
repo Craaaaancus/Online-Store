@@ -1,0 +1,16 @@
+$redDark: #c71a1a;
+
+button[is="reset-all-button"] {
+  background: $redDark;
+  color: #fff;
+  transition: background .5s linear;
+  border-radius: 15px;
+  font-weight: bold;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+}
+
+button[is="reset-all-button"]:hover {
+  background: #ae0a0a;
+}
