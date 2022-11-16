@@ -1,0 +1,39 @@
+$urlToFooterLogo: '../images/rs_school_js.svg';
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(2, 37, 43);
+  padding: 10px 15px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: 65px;
+  background: rgb(252, 255, 60);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.footer-logo a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.logo-img {
+  background-image: url($urlToFooterLogo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.footer-github, .footer-copyright {
+  color: rgb(105, 219, 126);
+  font-size: 1.5rem;
+}
+
+.footer-copyright::before {
+  content: "©";
+}

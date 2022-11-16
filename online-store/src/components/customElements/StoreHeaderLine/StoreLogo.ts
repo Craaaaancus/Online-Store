@@ -1,5 +1,5 @@
 import './StoreLogo.scss'
-import '../assets/images/balloon.png'
+import '../images/balloon.png'
 
 export class StoreLogo extends HTMLElement {
   connectedCallback(){

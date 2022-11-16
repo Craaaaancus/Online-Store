@@ -10,6 +10,10 @@ dropdown-select {
   border-image: initial;
 }
 
+dropdown-select:hover .dropdown-button {
+  border-color: rgb(9, 102, 118);
+}
+
 .dropdown-button {
   width: 16px;
   height: 16px;

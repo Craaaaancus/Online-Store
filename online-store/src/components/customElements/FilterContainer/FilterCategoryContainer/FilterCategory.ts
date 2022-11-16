@@ -22,24 +22,27 @@ export class FilterCategory extends HTMLElement {
       case 'brand':
         this.innerHTML = this.getBrandHTML()
         break
+      default:
+        return
     }
     
+    this.onclick = this.handleClick
   }
 
   private getColorHTML() {
     return `
       <h3 class="category-header">Color</h3>
       <div class="category-content colors">
-        <div class="color red"></div>
-        <div class="color green"></div>
-        <div class="color grey"></div>
-        <div class="color black"></div>
-        <div class="color purple"></div>
-        <div class="color yellow"></div>
-        <div class="color blue"></div>
-        <div class="color white"></div>
-        <div class="color pink"></div>
-        <div class="color orange"></div>
+        <div class="category-item color red"></div>
+        <div class="category-item color green"></div>
+        <div class="category-item color grey"></div>
+        <div class="category-item color black"></div>
+        <div class="category-item color purple"></div>
+        <div class="category-item color yellow"></div>
+        <div class="category-item color blue"></div>
+        <div class="category-item color white"></div>
+        <div class="category-item color pink"></div>
+        <div class="category-item color orange"></div>
       </div>
     `
   }
@@ -48,10 +51,10 @@ export class FilterCategory extends HTMLElement {
     return `
       <h3 class="category-header">Brand</h3>
       <div class="category-content brands">
-        <div class="brand marvel"></div>
-        <div class="brand pokemon"></div>
-        <div class="brand tmnt"></div>
-        <div class="brand transformers"></div>
+        <div class="category-item brand marvel"></div>
+        <div class="category-item brand pokemon"></div>
+        <div class="category-item brand tmnt"></div>
+        <div class="category-item brand transformers"></div>
       </div>
     `
   }
@@ -60,11 +63,19 @@ export class FilterCategory extends HTMLElement {
     return `
       <h3 class="category-header">Company</h3>
       <div class="category-content companies">
-        <div class="company bandai"></div>
-        <div class="company funko"></div>
-        <div class="company hasbro"></div>
-        <div class="company medicom"></div>
+        <div class="category-item company bandai"></div>
+        <div class="category-item company funko"></div>
+        <div class="category-item company hasbro"></div>
+        <div class="category-item company medicom"></div>
       </div>
     `
+  }
+
+  private handleClick(event: MouseEvent) {
+    const target: HTMLElement = event.target as HTMLElement
+    const item: HTMLElement | null = target.closest('.category-item')
+    if (item && this.contains(item)) {
+      item.classList.toggle('active')
+    }
   }
 }

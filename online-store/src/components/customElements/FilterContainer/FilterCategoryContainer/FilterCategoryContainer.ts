@@ -1,12 +1,14 @@
 import './FilterCategoryContainer.scss'
 import { FilterCategory } from './FilterCategory'
 import { RangeSlider } from './RangeSlider'
+import { FilterCheckbox } from './FilterCheckbox'
 
 export class FilterCategoryContainer extends HTMLElement {
   constructor(){
     super()
     customElements.define('range-slider', RangeSlider)
     customElements.define('filter-category', FilterCategory)
+    customElements.define('filter-checkbox', FilterCheckbox)
   }
 
   connectedCallback(){
@@ -37,10 +39,7 @@ export class FilterCategoryContainer extends HTMLElement {
           secondValue=${secondValue}
         ></range-slider>
       </div>
-      <div class="only-popular-category">
-        <h4>Only popular: </h4>
-        <div class="checkbox"></div>
-      </div>
+      <filter-checkbox></filter-checkbox>
     `
   }
 }

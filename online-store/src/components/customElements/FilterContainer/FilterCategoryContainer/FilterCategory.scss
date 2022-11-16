@@ -15,9 +15,53 @@ filter-category {
   margin-bottom: 5px;
 }
 
-.color, .brand, .company {
+.category-item {
   cursor: pointer;
   transition: transform .3s linear;
+  position: relative;
+}
+
+.category-item::after {
+  content: "";
+  display: block;
+  height: 12px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  border-style: solid;
+  border-image: initial;
+  border-color: rgb(221, 255, 0);
+}
+
+.category-item.active:not(.color) {
+  filter: grayscale(25%);
+}
+
+.category-item.active::after {
+  opacity: 1;
+}
+
+.color::after {
+  border-width: 0px 3px 3px 0px;
+  left: 4px;
+}
+
+.yellow::after, .pink::after, .white::after {
+  border-color: rgb(44, 44, 42)
+}
+
+.brand::after {
+  border-width: 0px 5px 5px 0px;
+  left: 60px;
+  top: 16px;
+}
+
+.company::after {
+  border-width: 0px 5px 5px 0px;
+  left: 60px;
+  top: 16px;
 }
 
 .color:hover, .brand:hover, .company:hover {
